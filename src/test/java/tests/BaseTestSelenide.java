@@ -11,8 +11,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseTestSelenide {
     @BeforeMethod
     public void setUp() throws Exception {
-        //Configuration.holdBrowserOpen = true;
-
         open(ResourcesUtils.getResources("configs","baseUrlForSelenideTests"));
     }
 

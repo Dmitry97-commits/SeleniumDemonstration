@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite thread-count="1" verbose="1" name="Gmail Suite" annotations="JDK" parallel="tests">
+<suite thread-count="1" verbose="1" name="Demonstration" annotations="JDK" parallel="tests">
 
     <test name="selenium">
         <classes>
@@ -11,6 +11,12 @@
     <test name="selenide">
         <classes>
             <class name="tests.SelenideTests"/>
+        </classes>
+    </test>
+
+    <test name="restAssured">
+        <classes>
+            <class name="tests.RestAssuredTests"/>
         </classes>
     </test>
 </suite>

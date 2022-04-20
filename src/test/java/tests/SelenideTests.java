@@ -33,9 +33,7 @@ public class SelenideTests extends BaseTestSelenide{
                 .enterHobbie(hobbie)
                 .enterBD("18","December","1997")
                 .uploadFile()
-                //.enterStateAndCity()
                 .clickBySubject();
-
 
         Map<String,String> dictStudent = SubmittingPage.getStudentInfo();
 
@@ -45,7 +43,7 @@ public class SelenideTests extends BaseTestSelenide{
         softAssert.assertEquals(dictStudent.get("gender"),gender);
         softAssert.assertEquals(dictStudent.get("mobile"),phoneNumber);
         softAssert.assertEquals(dictStudent.get("hobbies"),hobbie);
-        //softAssert.assertEquals(dictStudent.get("picture"),"screenshot.png");
+        softAssert.assertEquals(dictStudent.get("picture"),"screenshot.png");
         softAssert.assertAll("Information doesn't match");
 
     }
